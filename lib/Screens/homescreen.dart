@@ -29,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
     "+",
     "0",
     ".",
-    "ANS",
     "=",
   ];
 
@@ -84,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               flex: 2,
               child: SizedBox(
-                width: 350,
+                // width: 350,
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 4,
@@ -121,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             expressions();
                           });
                         },
-                        buttoncolor: Colors.pink.shade100,
+                        buttoncolor: Colors.teal.shade100,
                         buttontext: buttons[index],
                         buttontextcolor: Colors.black,
                       );
