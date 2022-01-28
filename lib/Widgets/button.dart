@@ -5,12 +5,12 @@ class AllButtons extends StatelessWidget {
       {required this.buttoncolor,
       required this.buttontext,
       required this.buttontextcolor,
-       this.onPressed});
+      this.onPressed});
 
   Color buttoncolor;
   String buttontext;
   Color buttontextcolor;
-final VoidCallback? onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ final VoidCallback? onPressed;
               buttontext,
               style: TextStyle(
                 color: buttontextcolor,
-                fontSize: 20,
+                fontSize: 22,
                 fontWeight: FontWeight.w500,
               ),
             ),

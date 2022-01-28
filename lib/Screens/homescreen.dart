@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        // backgroundColor: Colors.blue[100],
         body: Column(
           children: [
             Expanded(
@@ -56,19 +56,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(30.0),
                     alignment: Alignment.centerRight,
                     child: Text(
                       userinput,
-                      style: const TextStyle(color: Colors.brown, fontSize: 25),
+                      style: const TextStyle(color: Colors.black, fontSize: 35),
                     ),
                   ),
+                  const Divider(
+                    indent: 35,
+                    endIndent: 35,
+                    thickness: 2,
+                    color: Colors.black,
+                  ),
                   Container(
-                    padding: const EdgeInsets.all(8.0),
+                    padding:
+                        const EdgeInsets.only(right: 35, top: 30, bottom: 30),
                     alignment: Alignment.centerRight,
                     child: Text(
                       useroutput,
-                      style: const TextStyle(color: Colors.brown, fontSize: 25),
+                      style: const TextStyle(color: Colors.black, fontSize: 30),
                     ),
                   ),
                 ],
@@ -76,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(
               flex: 2,
-              child: Container(
+              child: SizedBox(
                 width: 350,
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -91,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             userinput = "";
                           });
                         },
-                        buttoncolor: Colors.green,
+                        buttoncolor: Colors.green.shade800,
                         buttontext: buttons[index],
                         buttontextcolor: Colors.black,
                       );
@@ -103,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 userinput.substring(0, userinput.length - 1);
                           });
                         },
-                        buttoncolor: Colors.red,
+                        buttoncolor: Colors.red.shade800,
                         buttontext: buttons[index],
                         buttontextcolor: Colors.black,
                       );
@@ -114,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             expressions();
                           });
                         },
-                        buttoncolor: Colors.yellow,
+                        buttoncolor: Colors.pink.shade100,
                         buttontext: buttons[index],
                         buttontextcolor: Colors.black,
                       );
@@ -126,8 +133,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           });
                         },
                         buttoncolor: isOperator(buttons[index])
-                            ? Colors.yellow
-                            : Colors.white,
+                            ? Colors.pink.shade100
+                            : Colors.blue.shade100,
                         buttontext: buttons[index],
                         buttontextcolor: Colors.black,
                       );
